@@ -1289,8 +1289,8 @@ a:focus-visible, button:focus-visible, input:focus-visible{
     {
       "id": "tga",
       "category": "transposition",
-      "name": "d-TGA",
-      "short": "d-TGA",
+      "name": "TGA",
+      "short": "TGA",
       "overview": [],
       "decisionTrees": [
         {
@@ -1470,6 +1470,29 @@ a:focus-visible, button:focus-visible, input:focus-visible{
         "- LV failure, deconditioned",
         "- Conduction anomalies.",
         "- Coagulopathies, lung and kidney injury due to very long CPB time"
+      ]
+    },
+    {
+      "id": "dorv",
+      "category": "transposition",
+      "name": "DORV - Double Outlet Right Ventricle",
+      "short": "DORV — anatomic type dictates management, from VSD-like to single ventricle",
+      "overview": [
+        "Almost all have also a VSD."
+      ],
+      "decisionTrees": [
+        {
+          "title": "Anatomic type & management",
+          "tree": {
+            "question": "DORV type?",
+            "options": [
+              { "label": "Subaortic or non-committed VSD (VSD type)", "result": { "text": "Managed like VSD (Left-to-Right shunt lesions). Surgical: Baffle VSD to aorta.", "linkTo": "vsd" } },
+              { "label": "Sub-pulmonary VSD (TGA type / Taussig-Bing)", "result": { "text": "Managed like TGA. Surgical: Baffle VSD to pulmonary artery plus arterial switch.", "linkTo": "tga" } },
+              { "label": "Subaortic VSD with PS (Fallot type)", "result": { "text": "Managed like TOF (Right heart/obstructive - cyanotic lesions). Surgical: Baffle VSD to aorta with pulmonary valve repair.", "linkTo": "tof" } },
+              { "label": "Rudimentary LV (Single ventricle type)", "result": { "text": "Single ventricle management.", "linkTo": "single_ventricle_pathway" } }
+            ]
+          }
+        }
       ]
     },
     {
